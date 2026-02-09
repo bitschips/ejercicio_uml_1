@@ -53,7 +53,7 @@ public class Main {
 ```
 ## Código UML generado a partir del código Java
 
-```uml
+```mermaid
 classDiagram
     class Producto {
         -String nombre
