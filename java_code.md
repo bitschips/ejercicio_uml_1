@@ -1,4 +1,10 @@
-### Ejemplo de código
+# Crea un UML del siguiente código Java
+
+1. Entra en https://www.planttext.com/
+2. Pega en la parte lateral izquierda el siguiente código:
+
+## Ejemplo de código
+
 
 ```java
 import java.util.Scanner;
