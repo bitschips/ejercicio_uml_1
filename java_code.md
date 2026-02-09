@@ -1,10 +1,11 @@
 # Crea un UML del siguiente código Java
 
 1. Entra en https://www.planttext.com/
-2. Pega en la parte lateral izquierda el siguiente código:
+2. Copia el código de ejemplo de abajo
+3. Utiliza IA para generar el fiochero en formato UML
+4. Pega el código generado en la web planttext.com y genera el diagrama
 
-## Ejemplo de código
-
+## Ejemplo de código Java
 
 ```java
 import java.util.Scanner;
@@ -49,4 +50,32 @@ public class Main {
         System.out.println("Total con IVA: " + calc.calcularPrecioFinal(prod.getPrecioBase()));
     }
 }
+```
+## Código UML generado a partir del código Java
+
+```uml
+classDiagram
+    class Producto {
+        -String nombre
+        -double precioBase
+        +Producto(String nombre, double precioBase)
+        +getPrecioBase() double
+    }
+
+    class CalculadoraIVA {
+        -double IVA
+        +calcularPrecioFinal(double precio) double
+    }
+
+    class Main {
+        +main(String[] args)
+    }
+
+    class Scanner {
+        <<External>>
+    }
+
+    Main ..> Producto : crea instacia
+    Main ..> CalculadoraIVA : usa para calcular
+    Main ..> Scanner : lee entrada
 ```
