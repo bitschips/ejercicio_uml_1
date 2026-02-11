@@ -141,3 +141,25 @@ sequenceDiagram
     
     M->>Usuario: Imprime "Total con IVA: 24.2"
 ```
+
+## Diagrama de estados:
+
+```mermaid
+stateDiagram-v2
+    [*] --> EsperandoDatos: Inicio del programa
+    
+    state EsperandoDatos {
+        [*] --> LecturaNombre
+        LecturaNombre --> LecturaPrecio: Nombre ingresado
+        LecturaPrecio --> DatosCompletos: Precio ingresado
+    }
+    
+    EsperandoDatos --> ObjetoInstanciado: Constructor Producto(n, p)
+    
+    state ObjetoInstanciado {
+        [*] --> CalculandoIVA
+        CalculandoIVA --> PrecioFinalListo: aplicar 21%
+    }
+    
+    PrecioFinalListo --> [*]: Mostrar resultado y finalizar
+```mermaid
