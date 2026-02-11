@@ -82,6 +82,27 @@ classDiagram
 
 ## Explicación de los símbolos:
 
+classDiagram
+    class Producto {
+        -String nombre
+        -double precioBase
+        +Producto(String nombre, double precioBase)
+        +getPrecioBase() double
+    }
+
+    class CalculadoraIVA {
+        -double IVA
+        +calcularPrecioFinal(double precio) double
+    }
+
+    class Main {
+        +main(args: String[]) void
+    }
+
+    Main ..> Producto : "instancia"
+    Main ..> CalculadoraIVA : "usa"
+    Main ..> Scanner : "usa"
+
 - (Guion): Significa que el atributo es private. Solo se ve dentro de esa clase.
 + (Más): Significa que el método es public. Se puede llamar desde fuera (como el constructor de Producto).
 Flechas punteadas ..>: Indican una dependencia. Significa que la clase Main necesita a las otras para funcionar, pero no "son" parte de ella permanentemente (solo las usa en el método main).
