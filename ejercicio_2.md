@@ -69,7 +69,7 @@ classDiagram
     AlgoritmoCifrado <|-- Blowfish : hereda
     AlgoritmoCifrado <|-- MD5 : hereda
 ´´´
----
+
 ´´´mermaid
 classDiagram
     class AplicacionCifrado {
